@@ -56,25 +56,9 @@ The Trade-off: Making the system fair reduced overall accuracy from 85% to 81%. 
    - random forest
 4. Comparison of results based on metrics
 
-
 # How to run a notebook?
 
 Create a virtual environment.
 Install libraries:
 pip install -r requirements.txt
 download datset and put into /data folder in root directory.
-
-
-
-Wnioseki (pl)
-Obie cechy wykazują zbliżony, wysoki poziom braku równości demograficznej.
-
-Analiza metryk wewnątrz podgrup płciowych ujawnia systematyczną stronniczość modelu baseline. Największą dysproporcję widać w Selection Rate (26% dla mężczyzn vs 8% dla kobiet), co wskazuje na wyraźny brak równości demograficznej.
-
-Kluczowym znaleziskiem jest różnica w FPR (False Positive Rate). Model trzykrotnie częściej przypisuje wysokie zarobki mężczyznom, którzy w rzeczywistości zarabiają mało (10%), niż kobietom w analogicznej sytuacji (3%). W połączeniu z niższym współczynnikiem Recall dla kobiet (55% vs 62%), dane sugerują, że model stawia kobietom znacznie wyższą 'poprzeczkę' wejścia do klasy wysokich zarobków, jednocześnie wykazując większy stopień tolerancji na błędy (tzw. kredyt zaufania) wobec grupy mężczyzn
-
-Wysokie DPD (0.17) wynika w dużej mierze z historycznych nierówności obecnych w zbiorze danych (niższy base rate wysokich zarobków u kobiet). Jednak fakt, że model wykazuje niższy Recall (TPR) oraz znacznie niższy FPR dla kobiet niż dla mężczyzn, dowodzi, że algorytm nie tylko odwzorowuje te różnice, ale dodatkowo stawia kobietom surowsze warunki klasyfikacji, co pogłębia istniejącą niesprawiedliwość.
-
-Audyt sprawiedliwości względem rasy ujawnia głębokie nierówności, znacznie wykraczające poza proste różnice w liczebności grup. Wskaźnik EOD (0.33) znajduje odzwierciedlenie w drastycznych różnicach Recall (TPR) – model dwukrotnie rzadziej identyfikuje osoby zamożne w grupach mniejszościowych (Amer-Indian, Other) niż w grupie White czy Asian.
-
-Co więcej, model wykazuje silną stronniczość w zakresie 'kredytu zaufania' (FPR). Osoby o pochodzeniu azjatyckim lub białym mają ok. 3-4 razy większą szansę na optymistyczną pomyłkę modelu niż osoby czarnoskóre czy rdzenni Amerykanie. Sugeruje to, że algorytm baseline utrwala stereotypy rasowe, promując grupy dominujące nie tylko ze względu na ich cechy, ale także poprzez wyższy margines błędu na ich korzyść.
