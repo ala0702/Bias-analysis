@@ -5,50 +5,6 @@ model used in web chat format: Gemini 3Flash
 ## Selecting project and dataset
 
 prompt: "Projekt dotyczący biased data - jakie zbiory są dostepne i ktory najlepiej wybrac i dlaczgeo?"
-with response:
-"Projekt dotyczący **biased data** (stronniczych danych) to fascynujący temat, bo pozwala nie tylko na analizę techniczną, ale i etyczną. Wybór odpowiedniego zbioru zależy od tego, jaki rodzaj stronniczości chcesz zbadać: czy interesuje Cię dyskryminacja w zatrudnieniu, błędy w rozpoznawaniu twarzy, czy może uprzedzenia w modelach językowych.
-
-            Oto zestawienie najciekawszych zbiorów oraz rekomendacja, który z nich będzie najlepszy na start.
-
-            ### 1. Przegląd dostępnych zbiorów danych (Biased Datasets)
-
-            | Nazwa zbioru      | Dziedzina               | Rodzaj biasu         | Dlaczego warto?                                                                                                         |
-            | :---------------- | :---------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------- |
-            | **COMPAS**        | Prawo / Recydywa        | Rasowy               | Klasyk. Służy do przewidywania recydywy; wykazano, że system częściej mylił się na niekorzyść osób czarnoskórych.       |
-            | **Adult Income**  | Finanse / Socjoekonomia | Płeć                 | Dane z cenzusu USA. Przewidywanie dochodów (>50k$), gdzie płeć i pochodzenie silnie korelują z wynikiem.                |
-            | **German Credit** | Bankowość               | Wiek / Stan cywilny  | Mały, ale treściwy zbiór o przyznawaniu kredytów. Pozwala badać dyskryminację osób starszych lub o konkretnym statusie. |
-            | **Gender Shades** | Computer Vision         | Płeć / Kolor skóry   | Zbiór stworzony przez Joy Buolamwini, pokazujący błędy AI w rozpoznawaniu twarzy kobiet o ciemniejszej karnacji.        |
-            | **Toxic Comment** | NLP                     | Językowy / Kulturowy | Dane z Wikipedii/Jigsaw. Pozwala badać, czy algorytmy częściej flagują komentarze mniejszości jako "toksyczne".         |
-            | **MBBMD (2026)**  | Media / Newsy           | Polityczny           | Nowoczesny zbiór (Media Bias Bias-Mitigated) do wykrywania stronniczości w artykułach prasowych.                        |
-
-            ---
-
-            ### 2. Rekomendacja: Co wybrać?
-
-            Jeśli to Twój pierwszy taki projekt, najlepiej wybrać **Adult Income Dataset** (znany też jako Census Income) lub **COMPAS**.
-
-            #### Dlaczego Adult Income to najlepszy wybór?
-
-            1.  **Dostępność i dokumentacja:** Jest dostępny w repozytorium UCI Machine Learning oraz na Kaggle. Istnieją setki tutoriali, co ułatwia naukę.
-            2.  **Jasne metryki:** Łatwo na nim policzyć tzw. _Disparate Impact_ (nieproporcjonalny wpływ) – np. sprawdzić, o ile rzadziej model "przyznaje" wysokie zarobki kobietom przy takich samych kwalifikacjach jak u mężczyzn.
-            3.  **Wielowymiarowość:** Możesz badać bias nie tylko ze względu na płeć, ale też rasę, wiek czy kraj pochodzenia.
-
-            ---
-
-            ### 3. Jak podejść do analizy?
-
-            Wybierając zbiór, Twój projekt powinien przejść przez następujące etapy:
-
-            - **Eksploracja (EDA):** Wizualizacja rozkładów. Czy w danych jest 10 razy więcej mężczyzn niż kobiet? To pierwszy sygnał _representation bias_.
-            - **Trenowanie modelu:** Stwórz "naiwny" model bez poprawek.
-            - **Pomiar stronniczości:** Użyj bibliotek takich jak **AIF360** (IBM) lub **Fairlearn** (Microsoft). Zmierz _Equalized Odds_ lub _Demographic Parity_.
-            - **Mitigacja:** Spróbuj "naprawić" model, np. przez re-weighting (nadanie większej wagi niedoreprezentowanym grupom) lub usuwanie korelacji między cechami wrażliwymi a wynikiem.
-
-            ### Podsumowanie
-
-            Wybierz **Adult Income**, jeśli chcesz skupić się na algorytmach klasycznych (tabele, statystyka). Wybierz **Toxic Comment Classification**, jeśli wolisz pracować z tekstem i nowoczesnymi modelami NLP (Transformerami), gdzie bias jest subtelniejszy i trudniejszy do wyeliminowania.
-
-            Który z tych obszarów – dane tabelaryczne czy tekst – bardziej Cię interesuje w kontekście Twojego projektu?"
 
 --> Adult dataset was chosen.
 
