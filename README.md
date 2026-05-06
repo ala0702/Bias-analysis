@@ -1,5 +1,7 @@
 # BIAS ANALYSIS IN MACHINE LEARNING - MITIGATING BIAS IN MACHINE LEARNING
 
+## index: 288774
+
 # Goal of project
 
 In this project we will mainly focus on analysing if model is fair for specific groups (according to sex and race). Later on we will try to mitigate bias, dropping crucial and proxy columns.
